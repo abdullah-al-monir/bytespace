@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
+}
+
+@theme {
+  --color-brand: #003be2;
+  --color-lime: #d4fb20;
+  --color-lime-deep: #cbfc01;
+  --color-ink: #242528;
+  --color-navy: #040819;
+  --color-body: #4b4c53;
+  --color-body-2: #4f4f4f;
+  --color-muted: #82868e;
+  --color-line: #ced0d3;
+  --color-chip: #f5f5f6;
+  --color-surface: #fafafa;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: #fff;
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+  }
+}
+
+@utility drop-shadow-student {
+  filter: drop-shadow(0.52px 0.74px 3.04px rgb(0 0 0 / 0.04))
+    drop-shadow(2.23px 3.19px 5.72px rgb(0 0 0 / 0.06))
+    drop-shadow(5.38px 7.69px 9.57px rgb(0 0 0 / 0.07))
+    drop-shadow(10.2px 14.58px 16.09px rgb(0 0 0 / 0.08))
+    drop-shadow(16.95px 24.21px 24px rgb(0 0 0 / 0.09))
+    drop-shadow(25.84px 36.91px 36px rgb(0 0 0 / 0.1))
+    drop-shadow(37.12px 53.03px 56px rgb(0 0 0 / 0.105))
+    drop-shadow(51.04px 72.91px 72px rgb(0 0 0 / 0.13));
+}
+
+@utility h2-display {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+@utility h2-sub {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(24px, 4vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
